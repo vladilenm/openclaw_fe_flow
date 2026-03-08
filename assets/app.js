@@ -21,6 +21,10 @@
 
   const tg = window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
 
+  // Prevent duplicate handler registrations if init runs more than once
+  // (e.g., WebView reload quirks, hot reload, or page re-executions).
+  let mainButtonBound = false;
+
   function setHint(text) {
     if (!tgHint) return;
     tgHint.textContent = text;
@@ -154,7 +158,10 @@
     applyTelegramTheme();
     showMainButton();
 
-    tg.MainButton.onClick(onCta);
+    if (!mainButtonBound) {
+      tg.MainButton.onClick(onCta);
+      mainButtonBound = true;
+    }
 
     // Let users know they are in Telegram environment
     const v = tg.version ? `v${tg.version}` : 'unknown';
