@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0b1020" />
+
+    <title>OpenClaw AI Flow — Telegram Mini App</title>
+    <meta
+      name="description"
+      content="Технологичный AI-лендинг для Telegram Mini App: проблема → решение → выгоды → сценарии → CTA."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <!-- Telegram Mini App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Перейти к содержимому</a>
+
+    <header class="top" role="banner">
+      <div class="container top__inner">
+        <div class="brand" aria-label="OpenClaw AI Flow">
+          <div class="brand__mark" aria-hidden="true">
+            <span class="dot dot--a"></span>
+            <span class="dot dot--b"></span>
+            <span class="dot dot--c"></span>
+          </div>
+          <div class="brand__text">
+            <div class="brand__name">OpenClaw <span class="muted">AI Flow</span></div>
+            <div class="brand__tag">Telegram Mini App</div>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Навигация">
+          <a class="nav__link" href="#problem">Проблема</a>
+          <a class="nav__link" href="#solution">Решение</a>
+          <a class="nav__link" href="#benefits">Выгоды</a>
+          <a class="nav__link" href="#usecases">Сценарии</a>
+          <a class="nav__link" href="#faq">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+      <!-- HERO -->
+      <section class="hero" aria-label="Hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="pill">
+              <span class="pill__icon" aria-hidden="true">◆</span>
+              AI-автоматизация внутри Telegram
+            </p>
+            <h1 class="h1">
+              Соберите <span class="accent">AI‑поток</span> для продаж, поддержки и контента —
+              <span class="nowrap">в 1 Mini App</span>
+            </h1>
+            <p class="lead">
+              Один экран. Чёткие сценарии. Встроенная аналитика. Нажмите CTA — откроем Mini App и
+              покажем живой демо‑flow.
+            </p>
+
+            <div class="hero__actions" role="group" aria-label="Действия">
+              <button id="primaryCta" class="btn btn--primary" type="button">
+                Запустить демо
+              </button>
+              <a class="btn btn--ghost" href="#solution">Смотреть как работает</a>
+            </div>
+
+            <div class="trust" aria-label="Ключевые свойства">
+              <div class="trust__item">
+                <div class="trust__k"><span aria-hidden="true">⚡</span> 60–90 сек</div>
+                <div class="trust__v">до первого результата</div>
+              </div>
+              <div class="trust__item">
+                <div class="trust__k"><span aria-hidden="true">🧩</span> No-code</div>
+                <div class="trust__v">шаблоны + блоки</div>
+              </div>
+              <div class="trust__item">
+                <div class="trust__k"><span aria-hidden="true">🔒</span> Privacy</div>
+                <div class="trust__v">без секретов на лендинге</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__card" aria-label="AI панель">
+            <div class="glass">
+              <div class="glass__top">
+                <div class="status">
+                  <span class="status__dot" aria-hidden="true"></span>
+                  <span class="status__text">Flow Engine: online</span>
+                </div>
+                <div class="chip">tg://webapp</div>
+              </div>
+
+              <div class="timeline" role="list" aria-label="Пример цепочки">
+                <div class="step" role="listitem">
+                  <div class="step__icon" aria-hidden="true">1</div>
+                  <div class="step__body">
+                    <div class="step__t">Событие</div>
+                    <div class="step__d">Новый лид в Telegram</div>
+                  </div>
+                </div>
+                <div class="step" role="listitem">
+                  <div class="step__icon" aria-hidden="true">2</div>
+                  <div class="step__body">
+                    <div class="step__t">AI‑классификация</div>
+                    <div class="step__d">Интент + приоритет + язык</div>
+                  </div>
+                </div>
+                <div class="step" role="listitem">
+                  <div class="step__icon" aria-hidden="true">3</div>
+                  <div class="step__body">
+                    <div class="step__t">Авто‑ответ</div>
+                    <div class="step__d">Тон, факты, оффер, next step</div>
+                  </div>
+                </div>
+                <div class="step" role="listitem">
+                  <div class="step__icon" aria-hidden="true">4</div>
+                  <div class="step__body">
+                    <div class="step__t">Сохранение</div>
+                    <div class="step__d">CRM / таблица / webhook</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glass__bottom">
+                <div class="meter" aria-label="Прогресс">
+                  <div class="meter__bar" aria-hidden="true"><span></span></div>
+                  <div class="meter__meta">
+                    <span class="muted">Latency</span> ~220ms · <span class="muted">CTR</span>
+                    +18%
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__note" id="tgHint" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section id="problem" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">Проблема</h2>
+            <p class="sub">
+              В Telegram всё происходит быстро — но процессы часто распадаются: люди теряются,
+              ответы «плывут», а команда выгорает.
+            </p>
+          </div>
+
+          <div class="grid3">
+            <article class="card">
+              <h3 class="h3">Хаос в входящих</h3>
+              <p class="p">
+                Лиды приходят из разных источников, а менеджеры отвечают неравномерно.
+              </p>
+              <ul class="list">
+                <li>нет приоритизации</li>
+                <li>нет единых скриптов</li>
+                <li>сложно масштабировать</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">Слишком много ручного</h3>
+              <p class="p">Поддержка и продажи тратят время на одинаковые вопросы и рутину.</p>
+              <ul class="list">
+                <li>копипаст</li>
+                <li>ошибки и забытые шаги</li>
+                <li>задержки в ответе</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h3">Нет прозрачной аналитики</h3>
+              <p class="p">Понимание «что работает» теряется между чатами и таблицами.</p>
+              <ul class="list">
+                <li>неясно, где отваливаются</li>
+                <li>нет метрик по сценарию</li>
+                <li>трудно A/B тестировать</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTION -->
+      <section id="solution" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">Решение</h2>
+            <p class="sub">
+              OpenClaw AI Flow — это мини‑продукт внутри Telegram: запускаете сценарий, и он ведёт
+              пользователя по шагам.
+            </p>
+          </div>
+
+          <div class="grid2">
+            <div class="card card--wide">
+              <h3 class="h3">Конструктор flow‑шагов</h3>
+              <p class="p">
+                Триггеры, AI‑блоки, условия и интеграции. Собирайте логику как из кубиков.
+              </p>
+              <div class="bullets">
+                <div class="bullet"><span aria-hidden="true">▸</span> Шаблоны для быстрых стартов</div>
+                <div class="bullet"><span aria-hidden="true">▸</span> Гибкие переменные и контекст</div>
+                <div class="bullet"><span aria-hidden="true">▸</span> Webhook / CRM / Sheets</div>
+              </div>
+            </div>
+
+            <div class="card card--wide">
+              <h3 class="h3">AI‑вставки, где нужно</h3>
+              <p class="p">
+                Генерация, резюме, классификация, тональность — подключайте AI точечно.
+              </p>
+              <div class="bullets">
+                <div class="bullet"><span aria-hidden="true">▸</span> Контроль стиля и фактов</div>
+                <div class="bullet"><span aria-hidden="true">▸</span> Безопасные подсказки</div>
+                <div class="bullet"><span aria-hidden="true">▸</span> Логи действий для аудита</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout" role="note">
+            <div class="callout__k">Telegram‑нативно</div>
+            <div class="callout__v">
+              Мы используем Telegram WebApp API, поэтому CTA — это <strong>MainButton</strong>.
+              Кнопка адаптируется к теме пользователя.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFITS -->
+      <section id="benefits" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">Выгоды</h2>
+            <p class="sub">Сфокусируйтесь на ценности — рутину возьмёт на себя поток.</p>
+          </div>
+
+          <div class="grid3">
+            <article class="card">
+              <h3 class="h3">Быстрее ответы</h3>
+              <p class="p">Снижение времени реакции и рост конверсии в диалоге.</p>
+              <p class="metric"><span class="metric__v">-35%</span> median TTR</p>
+            </article>
+            <article class="card">
+              <h3 class="h3">Единый стандарт</h3>
+              <p class="p">Скрипты и тональность закреплены в сценарии, а не в голове команды.</p>
+              <p class="metric"><span class="metric__v">+18%</span> CTR</p>
+            </article>
+            <article class="card">
+              <h3 class="h3">Понятные метрики</h3>
+              <p class="p">Понимайте, на каком шаге теряются люди и что улучшать.</p>
+              <p class="metric"><span class="metric__v">x2</span> скорость итераций</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- USE CASES -->
+      <section id="usecases" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">Сценарии использования</h2>
+            <p class="sub">Выберите цель — мы предложим flow‑шаблон.</p>
+          </div>
+
+          <div class="usecases" role="list">
+            <article class="uc" role="listitem">
+              <h3 class="h3">Продажи</h3>
+              <p class="p">Квалификация лида → оффер → запись на созвон → напоминания.</p>
+              <div class="tags" aria-label="Теги">
+                <span class="tag">lead routing</span>
+                <span class="tag">calendar</span>
+                <span class="tag">CRM</span>
+              </div>
+            </article>
+            <article class="uc" role="listitem">
+              <h3 class="h3">Поддержка</h3>
+              <p class="p">FAQ → сбор контекста → решение → эскалация на человека.</p>
+              <div class="tags" aria-label="Теги">
+                <span class="tag">triage</span>
+                <span class="tag">SLA</span>
+                <span class="tag">handoff</span>
+              </div>
+            </article>
+            <article class="uc" role="listitem">
+              <h3 class="h3">Контент</h3>
+              <p class="p">Бриф → генерация → согласование → публикация → отчёт.</p>
+              <div class="tags" aria-label="Теги">
+                <span class="tag">templates</span>
+                <span class="tag">brand voice</span>
+                <span class="tag">reports</span>
+              </div>
+            </article>
+            <article class="uc" role="listitem">
+              <h3 class="h3">HR / внутренние процессы</h3>
+              <p class="p">Онбординг → ответы новичку → чек‑листы → уведомления.</p>
+              <div class="tags" aria-label="Теги">
+                <span class="tag">checklists</span>
+                <span class="tag">docs</span>
+                <span class="tag">alerts</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section cta" aria-label="Финальный CTA">
+        <div class="container cta__box">
+          <div class="cta__copy">
+            <h2 class="h2">Готовы попробовать?</h2>
+            <p class="sub">
+              Нажмите <strong>кнопку Telegram</strong> (MainButton) — мы откроем демо или отправим
+              событие в ваш обработчик.
+            </p>
+          </div>
+          <div class="cta__actions">
+            <button id="secondaryCta" class="btn btn--primary" type="button">
+              Открыть через MainButton
+            </button>
+            <button id="shareBtn" class="btn btn--ghost" type="button">Поделиться</button>
+          </div>
+          <p class="micro muted" id="envLine"></p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">FAQ</h2>
+            <p class="sub">Короткие ответы перед стартом.</p>
+          </div>
+
+          <div class="faq">
+            <details class="faq__item">
+              <summary>Это реальный Mini App или просто лендинг?</summary>
+              <div class="faq__body">
+                Это лендинг, адаптированный под Telegram Mini App. Он показывает UX и подключает
+                Telegram WebApp API (ready(), themeParams, MainButton).
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>Как подключить реальную логику?</summary>
+              <div class="faq__body">
+                В <code>assets/app.js</code> добавьте обработчик для MainButton и вызовите
+                <code>Telegram.WebApp.sendData()</code> или откройте ссылку через
+                <code>openLink</code>.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>Будет ли работать вне Telegram?</summary>
+              <div class="faq__body">
+                Да. Если Telegram WebApp недоступен, CTA остаётся в виде обычных кнопок.
+              </div>
+            </details>
+          </div>
+
+          <footer class="footer">
+            <div class="footer__left">© <span id="year"></span> OpenClaw</div>
+            <div class="footer__right">
+              <a class="footer__link" href="#main">Наверх</a>
+              <span class="footer__sep" aria-hidden="true">·</span>
+              <a class="footer__link" href="#faq">FAQ</a>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script defer src="./assets/app.js"></script>
+  </body>
+</html>
